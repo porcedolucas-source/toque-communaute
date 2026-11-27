@@ -1,0 +1,36 @@
+name: Signaler un problème
+description: Quelque chose ne marche pas comme prévu.
+title: "[Problème] "
+labels: ["problème"]
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Merci de prendre le temps de le signaler. Ne joignez ni enregistrement, ni transcription, ni journal sans les
+        avoir relus : ils peuvent citer des personnes.
+  - type: input
+    id: version
+    attributes:
+      label: Version de Toque
+      description: Réglages > À propos.
+    validations:
+      required: true
+  - type: input
+    id: appareil
+    attributes:
+      label: Appareil
+  - type: input
+    id: systeme
+    attributes:
+      label: Système
+  - type: textarea
+    id: probleme
+    attributes:
+      label: Ce qui s'est passé
+      description: Les étapes, dans l'ordre, et ce que l'app a affiché.
+    validations:
+      required: true
+  - type: textarea
+    id: attendu
+    attributes:
+      label: Ce que vous attendiez
